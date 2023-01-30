@@ -1,8 +1,5 @@
-import { NgModule } from '@angular/core';
+import { HostListener, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AccountmoduleModule } from './accountmodule/accountmodule.module';
-import { FeeComponent } from './accountmodule/fee/fee.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponentComponent } from './content-component/content-component.component';
@@ -13,13 +10,11 @@ import { EmployeeComponent } from './employee/employee.component';
   declarations: [
     AppComponent,
     ContentComponentComponent,
-    EmployeeComponent,
-    FeeComponent
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AccountmoduleModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
