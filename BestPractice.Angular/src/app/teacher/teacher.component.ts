@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./teacher.component.css'],
 })
 export class TeacherComponent {
-
+ //Step 5: ChildToParent
+ childData: any;
+  GetData(val:any){
+    this.childData = val;
+  }
 }

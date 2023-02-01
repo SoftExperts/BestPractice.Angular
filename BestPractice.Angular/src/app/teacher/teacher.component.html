@@ -1,9 +1,15 @@
 <h1>Parent Component : Teacher!</h1>
 
-// To hold data of input box we are using template reference variable by symbol '#' like #parentData,
-//  we get the the data we used the event of text box lik 'keyup'. '0' is used when we no need
-// to call the method.
-Parent Data : <input type="text" #parentData (keyup)="0"/>
+<!--Step 1: ParentToChild To hold data of input box we are using template reference variable by symbol '#' like #parentData,
+ we get the the data we used the event of text box lik 'keyup'. '0' is used when we no need
+ to call the method. -->
+<!-- Parent Data : <input type="text" #parentData (keyup)="0"/> -->
 
-// Now we are binding the data with variable 'pData' like
-<app-student [pData]="parentData.value"></app-student>
+<!-- Step 2: ParentToChild Now we are binding the data with variable 'pData' like -->
+<!-- <app-student [pData]="parentData.value"></app-student> -->
+
+<!-- Step 6: ChildToParent: Value of Child Component -->
+Value of Child Component: {{childData}}
+
+<!-- Step 4: ChildToParent, Now we will fire the childEvent in child component by using GetData Method, $event have emit event -->
+<app-student (childEvent)="GetData($event)"></app-student>

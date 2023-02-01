@@ -1,3 +1,7 @@
 <h1>Child Component : Student!</h1>
 
-Value from Parent Component: {{pData}}
+<!-- Step 5: ParentToChild -->
+<!-- Value from Parent Component: {{pData}} -->
+
+<!-- Step 1: ChildToParent -->
+Child to Parent: <input type="text" #childToParent (keyup)="onChange(childToParent.value)"/>
