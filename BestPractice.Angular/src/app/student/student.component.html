@@ -5,3 +5,41 @@
 
 <!-- Step 1: ChildToParent -->
 Child to Parent: <input type="text" #childToParent (keyup)="onChange(childToParent.value)"/>
+
+
+<!-- Working on *ngIf -->
+<br>
+<br>
+<hr>
+<input type="radio" name="radio1" (click)="changValue(true)" > True
+<input type="radio" name="radio1" (click)="changValue(false)" > False
+
+
+ <div *ngIf="isValid; then MyThenBlock; else MyElseBlock"></div>
+ 
+ <ng-template #MyThenBlock>
+    <div>This is valid Data using Then Block</div>
+</ng-template>
+
+<ng-template #MyElseBlock>
+    <div>This is not valid Data using Else Block</div>
+</ng-template>
+
+
+
+<!-- Second Example with else block
+ <div *ngIf="isValid; else MyElseBlock">
+    This is Valid Data
+</div>
+<ng-template #MyElseBlock>
+    <div>This is not valid Data using Else Block</div>
+</ng-template> -->
+
+
+<!--First Example with Simple ngIf
+<div *ngIf="isValid">
+    This is Valid Data
+</div>
+<div *ngIf="!isValid">
+    This is Not Valid Data
+</div> -->

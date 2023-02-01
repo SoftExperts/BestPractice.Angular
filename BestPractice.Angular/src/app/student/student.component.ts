@@ -13,14 +13,19 @@ import { Component, ViewEncapsulation, EventEmitter } from '@angular/core';
 })
 export class StudentComponent {
   // Step 3: ParentToChild
-    //  pData:any;
+  //  pData:any;
 
-// Step 2: ChildToParent , we make the custom event by using EventEmitter interface from core library.
+  // Step 2: ChildToParent , we make the custom event by using EventEmitter interface from core library.
   childEvent = new EventEmitter();
 
 onChange(val:any){
  // by using emit method of the child event we will pass the value
   this.childEvent.emit(val);
+}
 
+isValid:Boolean = true;
+
+changValue(valid:any){
+this.isValid = valid;
 }
 }
