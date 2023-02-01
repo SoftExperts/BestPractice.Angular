@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
-constructor(){
-  console.log("constructor load employee component!")
-}
+
 }

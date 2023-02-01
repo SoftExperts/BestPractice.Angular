@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Employee } from './employee';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'BestPractice.Angular';
-
+  
+  constructor(private _obj: Employee){
+    _obj.display();
+    _obj.show();
+  }
 }
