@@ -1,2 +1,9 @@
 <h1>Parent Component : Teacher!</h1>
-<app-student></app-student>
+
+// To hold data of input box we are using template reference variable by symbol '#' like #parentData,
+//  we get the the data we used the event of text box lik 'keyup'. '0' is used when we no need
+// to call the method.
+Parent Data : <input type="text" #parentData (keyup)="0"/>
+
+// Now we are binding the data with variable 'pData' like
+<app-student [pData]="parentData.value"></app-student>
