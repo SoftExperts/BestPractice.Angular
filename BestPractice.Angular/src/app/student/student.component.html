@@ -43,3 +43,21 @@ Child to Parent: <input type="text" #childToParent (keyup)="onChange(childToPare
 <div *ngIf="!isValid">
     This is Not Valid Data
 </div> -->
+
+<!-- NgSwtich -->
+<hr>
+<br>
+Enter Name: <input type="text" #nameRef (keyup)="0"/>
+
+<div [ngSwitch]="nameRef.value">
+<div *ngSwitchCase="'Asif'"> Hello! Asif</div>
+<div *ngSwitchCase="'Saeed'"> Hello! Saeed</div>
+<div *ngSwitchDefault> No Data Found</div>
+</div>
+
+
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'asif'"> Hello! Asif</div>
+    <div *ngSwitchCase="'Saeed'"> Hello! Saeed</div>
+    <div *ngSwitchDefault> No Data Found</div>
+</div>

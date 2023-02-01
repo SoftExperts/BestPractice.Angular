@@ -28,4 +28,5 @@ isValid:Boolean = true;
 changValue(valid:any){
 this.isValid = valid;
 }
+ name = 'asif';
 }
